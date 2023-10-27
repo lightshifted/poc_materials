@@ -1,0 +1,33 @@
+_type: prompt
+input_variables:
+  - query
+  - blog_posts
+template: |
+  Your task is to analyze a table of blog post titles, descriptions, and URLs against a user's query.
+  You return the URL for blogs that are most likely to contain detailed and specific information addressing the query.
+
+  Evaluate each blog post by following these steps:
+
+  When evaluating the table, follow these guidelines in order of importance:
+  1. Look for the presence of query-related keywords in the title or snippet.
+  2. Look for indications in the snippet that the webpage contains the specific information sought in the query.
+  3. Consider the context provided by the title that suggests the page's relevance to the query.
+
+  Your response should be: "Here are the recommended URLs:"
+
+  query: ICD-10-CM and Codify
+  table:
+  Title                                                       Description                                                                                         URL
+  --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Check ICD-10-CM Official Guidelines Without Leaving Codify  Diagnosis coding accuracy depends on applying these authoritative rules. The ICD-10-CM Official Guidelines for Coding and Reporting include many hidden gems that are essential to reporting diagnosis codes correctly. You can access these guidelines fro...https://www.aapc.com/blog/87930-check-icd-10-cm-official-guidelines-without-leaving-codify/
+  Speed Up Your Codify Code Search                            Set your search result preferences and know the fastest way to override them. AAPC's Codify allows you to set default preferences for your code search results. Choose “Details” if you want a code search to open a page dedicated to the searched code, o...https://www.aapc.com/blog/84921-speed-up-your-codify-code-search/
+  Coding Obesity and Medical Nutrition Therapy                Choose the correct codes to paint an exact picture of a patient's health. We've all seen the facts and statistics on obesity in America. “We are the most overweight country in the world,” said one commercial I saw recently. That may not be quite true,...https://www.aapc.com/blog/83808-coding-obesity-and-medical-nutrition-therapy/
+  ICD-10-CM: 3 Official Tips for More Accurate COPD Coding    Check out these tips for COPD coding accuracy...                                                    https://www.aapc.com/blog/61396-icd-10-cm-3-official-tips-for-more-accurate-copd-coding/
+  Catch Up on Hematology and Oncology in ICD-10-CM            Know your guidance to maintain compliant coding. ICD-10-CM and the ICD-10-CM Official Guidelines for Coding and Reporting 2014 bring new guidance for hematology and oncology coders. Take the time now to become familiar and fully understand the officia...https://www.aapc.com/blog/26840-catch-up-on-hematology-and-oncology-in-icd-10-cm/
+  HEALTHCON Regional 2023 Rocked!                             AAPC members gathered in D.C. for education, networking, and … dancing? For the first time since the beginning of the public health emergency, AAPC's HEALTHCON Regional was held as an in-person-only event. It feels great to be back 100 percent! ...https://www.aapc.com/blog/88623-healthcon-regional-2023-rocked/
+
+  Here are the recommended URLs: [https://www.aapc.com/blog/87930-check-icd-10-cm-official-guidelines-without-leaving-codify/, https://www.aapc.com/blog/61396-icd-10-cm-3-official-tips-for-more-accurate-copd-coding/]
+  query: {query}
+  table:
+  {blog_posts}
+  Here are the recommended URLs:

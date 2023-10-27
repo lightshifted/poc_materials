@@ -1,0 +1,15 @@
+_type: prompt
+input_variables:
+  - query
+template: |
+  Summarize the main point or key concept of the given query into two to four words, keeping important context in mind. Your summary should capture the essence of the query in a concise way.
+
+    For example:
+
+    query: 'Explain the significance of the greenhouse effect for Earth's climate.'
+    response: 'Greenhouse Effect Significance'
+
+    Now, apply this approach to the following query:
+
+    query: {query}
+    response:
